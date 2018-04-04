@@ -1,0 +1,17 @@
+
+
+<div class="container">
+  <h1 class="mt-3">영화목록</h1>
+  <div class="row justify-content-around">
+    <% @itemList.each do |i| %>
+      <div class="card mt-5" style="width: 18rem;">
+        <img class="card-img-top" src="<%= i["stillcut"]%>" alt="Card image cap">
+        <div class="card-body">
+          <h6 class="card-title"><%=i["title"]%></h5>
+          <p class="card-text"><%=i["running_time_str"]%></p>
+          <a href="#" class="btn btn-primary"><%=i["main_genre"]%></a>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
